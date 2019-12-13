@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="49" skip="0" tests="54" name="Acceptance" errors="0">
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Login To Application" time="0">
+<failure message="No keyword with name 'Open Browser' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Connect to server" time="0">
+<failure message="No keyword with name 'WebSocketClient.Connect' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Establish Database Connection" time="2">
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Verify Boot Notification is sent Successfully" time="0">
+<failure message="No keyword with name 'WebSocketClient.Send' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Go to Charge station list" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Remote Start Request" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Verify Transaction is Started Successfully" time="0">
+<failure message="No keyword with name 'WebSocketClient.Send' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Go to Charge station list" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Remote Stop Request:Accepted" time="1">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Get TransactionID From Table" time="0">
+</testcase>
+<testcase classname="Acceptance.OCPP Commands Only.OCPP Tests" name="Verify Transaction is stopped Successfully" time="0">
+<failure message="No keyword with name 'WebSocketClient.Send' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Login To Application" time="0">
+<failure message="No keyword with name 'Open Browser' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Connect to server" time="0">
+<failure message="No keyword with name 'WebSocketClient.Connect' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Establish Database Connection" time="0">
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Verify Boot Notification is sent Successfully" time="0">
+<failure message="No keyword with name 'WebSocketClient.Send' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Go to Charge station list" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Remote Start Request" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Verify Transaction is Started Successfully" time="0">
+<failure message="No keyword with name 'WebSocketClient.Send' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="EVSE-Search By Name" time="0">
+<failure message="No keyword with name 'Input text' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="EVSE-Search By StationID" time="0">
+<failure message="No keyword with name 'Input text' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="EVSE-Search By Location" time="0">
+<failure message="No keyword with name 'Input text' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Back to Dashboard" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Go to Charge station list" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Remote Stop Request:Accepted" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Get TransactionID From Table" time="0">
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="StopTransactionRequest" time="0">
+<failure message="No keyword with name 'WebSocketClient.Send' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Back to Dashboard" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Go to Session Summary" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Show OCPP Logs" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Search Logs by MessageType:Boot Notification" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Search Logs by MessageType:Start Transaction" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Search Logs by MessageType:Stop Transaction" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Search Logs by MessageType:Status Notification" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Back to Dashboard" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Go to Session Summary" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.Regression.Regression" name="Show OCPP Logs" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Login To Application" time="0">
+<failure message="No keyword with name 'Open Browser' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Go to Charge station list" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Connect to server" time="0">
+<failure message="No keyword with name 'WebSocketClient.Connect' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Establish Database Connection" time="0">
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Verify Boot Notification is sent Successfully" time="0">
+<failure message="No keyword with name 'WebSocketClient.Send' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Remote Start Request" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Verify Transaction is Started Successfully" time="0">
+<failure message="No keyword with name 'WebSocketClient.Send' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Remote Stop Request:Accepted" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="EVSE-Search By Name" time="0">
+<failure message="No keyword with name 'Input text' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="EVSE-Search By StationID" time="0">
+<failure message="No keyword with name 'Input text' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="EVSE-Search By Location" time="0">
+<failure message="No keyword with name 'Input text' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Back to Dashboard" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Go to Session Summary" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Show OCPP Logs" time="0">
+<failure message="No keyword with name 'Click Link' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Search Logs by MessageType:Boot Notification" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Search Logs by MessageType:Start Transaction" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Search Logs by MessageType:Stop Transaction" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+<testcase classname="Acceptance.UI.Phoenix UI Test" name="Search Logs by MessageType:Status Notification" time="0">
+<failure message="No keyword with name 'Click Element' found." type="AssertionError"></failure>
+</testcase>
+</testsuite>

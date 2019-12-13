@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191213 15:11:41.628" rpa="false">
+<suite id="s1" name="EMS Test" source="C:\Users\anujg\git\EMS_Test">
+<suite id="s1-s1" name="Src" source="C:\Users\anujg\git\EMS_Test\src">
+<suite id="s1-s1-s1" name="Test" source="C:\Users\anujg\git\EMS_Test\src\test">
+<suite id="s1-s1-s1-s1" name="Robotframework" source="C:\Users\anujg\git\EMS_Test\src\test\robotframework">
+<suite id="s1-s1-s1-s1-s1" name="Acceptance" source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance">
+<suite id="s1-s1-s1-s1-s1-s1" name="UI" source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\UI">
+<suite id="s1-s1-s1-s1-s1-s1-s1" name="Phoenix UI Test" source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\UI\Phoenix_UI_Test.robot">
+<test id="s1-s1-s1-s1-s1-s1-s1-t1" name="Login To Application">
+<kw name="Login To Application" library="WebSocketconnection">
+<arguments>
+<arg>&amp;{login_details}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>&amp;{login_values}[url]</arg>
+<arg>&amp;{login_values}[browser]</arg>
+</arguments>
+<msg timestamp="20191213 15:11:42.363" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8082/ems'.</msg>
+<status status="PASS" starttime="20191213 15:11:42.362" endtime="20191213 15:11:45.824"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20191213 15:11:45.825" endtime="20191213 15:11:46.939"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@formcontrolname='username']</arg>
+<arg>&amp;{login_values}[user]</arg>
+</arguments>
+<msg timestamp="20191213 15:11:46.940" level="INFO">Typing text 'superadmin' into text field 'xpath=//input[@formcontrolname='username']'.</msg>
+<status status="PASS" starttime="20191213 15:11:46.940" endtime="20191213 15:11:47.124"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:11:49.128" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:11:47.125" endtime="20191213 15:11:49.128"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[contains(@formcontrolname,'password')]</arg>
+<arg>&amp;{login_values}[password]</arg>
+</arguments>
+<msg timestamp="20191213 15:11:49.128" level="INFO">Typing password into text field 'xpath=//input[contains(@formcontrolname,'password')]'.</msg>
+<status status="PASS" starttime="20191213 15:11:49.128" endtime="20191213 15:11:49.271"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,'Login')]</arg>
+</arguments>
+<msg timestamp="20191213 15:11:49.272" level="INFO">Clicking button 'xpath=//button[contains(.,'Login')]'.</msg>
+<status status="PASS" starttime="20191213 15:11:49.272" endtime="20191213 15:11:49.373"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:11:51.376" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:11:49.374" endtime="20191213 15:11:51.376"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Total Locations</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:11:51.377" endtime="20191213 15:11:51.395"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:42.360" endtime="20191213 15:11:51.396"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:42.357" endtime="20191213 15:11:51.397" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t2" name="Go to Charge station list">
+<kw name="Go to Charge station list" library="WebSocketconnection">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,'Charge Management')]</arg>
+</arguments>
+<msg timestamp="20191213 15:11:51.401" level="INFO">Clicking link 'xpath=//a[contains(.,'Charge Management')]'.</msg>
+<status status="PASS" starttime="20191213 15:11:51.400" endtime="20191213 15:11:51.702"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:11:53.713" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:11:51.703" endtime="20191213 15:11:53.713"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Charge Stations</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:11:53.713" endtime="20191213 15:11:53.729"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:51.399" endtime="20191213 15:11:53.729"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:51.398" endtime="20191213 15:11:53.729" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t3" name="Connect to server">
+<kw name="Connect to server" library="WebSocketconnection">
+<kw name="Connect" library="WebSocketClient">
+<arguments>
+<arg>ws://localhost:8887/1234</arg>
+</arguments>
+<assign>
+<var>${my_websocket}</var>
+</assign>
+<msg timestamp="20191213 15:11:53.743" level="INFO">${my_websocket} = &lt;websocket._core.WebSocket object at 0x07A34268&gt;</msg>
+<status status="PASS" starttime="20191213 15:11:53.737" endtime="20191213 15:11:53.743"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${my_websocket}</arg>
+</arguments>
+<msg timestamp="20191213 15:11:53.744" level="INFO">${my_websocket} = &lt;websocket._core.WebSocket object at 0x07A34268&gt;</msg>
+<status status="PASS" starttime="20191213 15:11:53.743" endtime="20191213 15:11:53.744"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:53.736" endtime="20191213 15:11:53.745"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:53.735" endtime="20191213 15:11:53.745" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t4" name="Establish Database Connection">
+<kw name="Establish Database Connection" library="WebSocketconnection">
+<kw name="Connect To Database" library="DatabaseLibrary">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+</arguments>
+<msg timestamp="20191213 15:11:53.781" level="INFO">Connecting using : pymysql.connect(db=ems_flyway, user=root, passwd=root, host=localhost, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20191213 15:11:53.748" endtime="20191213 15:11:53.828"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:53.747" endtime="20191213 15:11:53.829"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:53.746" endtime="20191213 15:11:53.830" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t5" name="Verify Boot Notification is sent Successfully">
+<kw name="BootNotificationRequest" library="WebSocketconnection">
+<arguments>
+<arg>&amp;{Bootmessage}</arg>
+</arguments>
+<kw name="Send" library="WebSocketClient">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>&amp;{Bootmessage}[bootmessage]</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:11:53.834" endtime="20191213 15:11:53.835"></status>
+</kw>
+<kw name="Recv" library="WebSocketClient">
+<arguments>
+<arg>${my_websocket}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20191213 15:11:53.957" level="INFO">${result} = [3,"766590",{"currentTime":"2019-12-13T09:41:53Z","interval":20,"status":"Accepted"}]</msg>
+<status status="PASS" starttime="20191213 15:11:53.836" endtime="20191213 15:11:53.958"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20191213 15:11:53.959" level="INFO">[3,"766590",{"currentTime":"2019-12-13T09:41:53Z","interval":20,"status":"Accepted"}]</msg>
+<status status="PASS" starttime="20191213 15:11:53.958" endtime="20191213 15:11:53.959"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>Accepted</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:11:53.960" endtime="20191213 15:11:53.961"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:11:55.963" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:11:53.962" endtime="20191213 15:11:55.963"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:53.833" endtime="20191213 15:11:55.964"></status>
+</kw>
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20191213 15:11:55.964" endtime="20191213 15:11:56.880"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:53.831" endtime="20191213 15:11:56.881" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t6" name="Remote Start Request">
+<kw name="Remote Start Request:Accepted" library="WebSocketconnection">
+<arguments>
+<arg>&amp;{StartMessage}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Start']</arg>
+</arguments>
+<msg timestamp="20191213 15:11:56.888" level="INFO">Clicking element 'xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Start']'.</msg>
+<status status="PASS" starttime="20191213 15:11:56.887" endtime="20191213 15:11:57.064"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:11:59.065" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:11:57.064" endtime="20191213 15:11:59.065"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[contains(@placeholder,'RFID')]</arg>
+<arg>123456</arg>
+</arguments>
+<msg timestamp="20191213 15:11:59.067" level="INFO">Typing text '123456' into text field 'xpath=//input[contains(@placeholder,'RFID')]'.</msg>
+<status status="PASS" starttime="20191213 15:11:59.066" endtime="20191213 15:11:59.213"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-button-wrapper'][contains(.,'Start')]</arg>
+</arguments>
+<msg timestamp="20191213 15:11:59.214" level="INFO">Clicking element 'xpath=//span[@class='mat-button-wrapper'][contains(.,'Start')]'.</msg>
+<status status="PASS" starttime="20191213 15:11:59.214" endtime="20191213 15:11:59.302"></status>
+</kw>
+<kw name="Recv" library="WebSocketClient">
+<arguments>
+<arg>${my_websocket}</arg>
+</arguments>
+<assign>
+<var>${RemoteStartRequest}</var>
+</assign>
+<msg timestamp="20191213 15:11:59.425" level="INFO">${RemoteStartRequest} = [2,"15f49a42-5bcb-4d8d-b660-23b4ebc33d3e","RemoteStartTransaction",{"connectorId":1,"idTag":"123456"}]</msg>
+<status status="PASS" starttime="20191213 15:11:59.303" endtime="20191213 15:11:59.425"></status>
+</kw>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${RemoteStartRequest}</arg>
+<arg>separator=,</arg>
+<arg>max_split=-1</arg>
+</arguments>
+<assign>
+<var>@{words}</var>
+</assign>
+<msg timestamp="20191213 15:11:59.427" level="INFO">@{words} = [ [2 | "15f49a42-5bcb-4d8d-b660-23b4ebc33d3e" | "RemoteStartTransaction" | {"connectorId":1 | "idTag":"123456"}] ]</msg>
+<status status="PASS" starttime="20191213 15:11:59.426" endtime="20191213 15:11:59.427"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>MessageID=@{words}[1]</arg>
+<arg>CommandName=@{words}[2]</arg>
+</arguments>
+<assign>
+<var>&amp;{RequestData}</var>
+</assign>
+<msg timestamp="20191213 15:11:59.429" level="INFO">&amp;{RequestData} = { MessageID="15f49a42-5bcb-4d8d-b660-23b4ebc33d3e" | CommandName="RemoteStartTransaction" }</msg>
+<status status="PASS" starttime="20191213 15:11:59.427" endtime="20191213 15:11:59.429"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>[3,</arg>
+<arg>&amp;{RequestData}[MessageID]</arg>
+</arguments>
+<assign>
+<var>${RemoteStartResponse}</var>
+</assign>
+<msg timestamp="20191213 15:11:59.430" level="INFO">${RemoteStartResponse} = [3,"15f49a42-5bcb-4d8d-b660-23b4ebc33d3e"</msg>
+<status status="PASS" starttime="20191213 15:11:59.430" endtime="20191213 15:11:59.431"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${RemoteStartResponse}</arg>
+<arg>,{"status":"Accepted"}]</arg>
+</arguments>
+<assign>
+<var>${RemoteStartResponse}</var>
+</assign>
+<msg timestamp="20191213 15:11:59.432" level="INFO">${RemoteStartResponse} = [3,"15f49a42-5bcb-4d8d-b660-23b4ebc33d3e",{"status":"Accepted"}]</msg>
+<status status="PASS" starttime="20191213 15:11:59.431" endtime="20191213 15:11:59.432"></status>
+</kw>
+<kw name="Send" library="WebSocketClient">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>${RemoteStartResponse}</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:11:59.432" endtime="20191213 15:11:59.433"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:01.436" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:11:59.434" endtime="20191213 15:12:01.436"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:56.885" endtime="20191213 15:12:01.437"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:11:56.884" endtime="20191213 15:12:01.437" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t7" name="Verify Transaction is Started Successfully">
+<kw name="StartTransactionRequest" library="WebSocketconnection">
+<arguments>
+<arg>&amp;{StartMessage}</arg>
+</arguments>
+<kw name="Send" library="WebSocketClient">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>&amp;{StartMessage}[startmessage]</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:12:01.442" endtime="20191213 15:12:01.443"></status>
+</kw>
+<kw name="Recv" library="WebSocketClient">
+<arguments>
+<arg>${my_websocket}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20191213 15:12:01.666" level="INFO">${result} = [3,"867508",{"authorizedUserId":2,"idTagInfo":{"expiryDate":"2019-12-21T11:06:02Z","status":"Accepted"},"transactionId":80}]</msg>
+<status status="PASS" starttime="20191213 15:12:01.444" endtime="20191213 15:12:01.667"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:01.669" level="INFO">[3,"867508",{"authorizedUserId":2,"idTagInfo":{"expiryDate":"2019-12-21T11:06:02Z","status":"Accepted"},"transactionId":80}]</msg>
+<status status="PASS" starttime="20191213 15:12:01.668" endtime="20191213 15:12:01.669"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>Accepted</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:12:01.670" endtime="20191213 15:12:01.671"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:03.672" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:01.672" endtime="20191213 15:12:03.672"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:01.440" endtime="20191213 15:12:03.673"></status>
+</kw>
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20191213 15:12:03.673" endtime="20191213 15:12:04.622"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:01.438" endtime="20191213 15:12:04.623" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t8" name="Remote Stop Request:Accepted">
+<kw name="Remote Stop Request:Accepted" library="WebSocketconnection">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Stop']</arg>
+</arguments>
+<msg timestamp="20191213 15:12:04.628" level="INFO">Clicking element 'xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Stop']'.</msg>
+<status status="PASS" starttime="20191213 15:12:04.627" endtime="20191213 15:12:04.852"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:06.854" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:04.853" endtime="20191213 15:12:06.854"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-button-wrapper'][contains(.,'Stop')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:06.855" level="INFO">Clicking element 'xpath=//span[@class='mat-button-wrapper'][contains(.,'Stop')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:06.855" endtime="20191213 15:12:06.926"></status>
+</kw>
+<kw name="Recv" library="WebSocketClient">
+<arguments>
+<arg>${my_websocket}</arg>
+</arguments>
+<assign>
+<var>${RemoteStopRequest}</var>
+</assign>
+<msg timestamp="20191213 15:12:06.944" level="INFO">${RemoteStopRequest} = [2,"8557f8fb-ec50-4564-842d-c92a9b9f49cd","RemoteStopTransaction",{"transactionId":80}]</msg>
+<status status="PASS" starttime="20191213 15:12:06.927" endtime="20191213 15:12:06.944"></status>
+</kw>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${RemoteStopRequest}</arg>
+<arg>separator=,</arg>
+<arg>max_split=-1</arg>
+</arguments>
+<assign>
+<var>@{words}</var>
+</assign>
+<msg timestamp="20191213 15:12:06.946" level="INFO">@{words} = [ [2 | "8557f8fb-ec50-4564-842d-c92a9b9f49cd" | "RemoteStopTransaction" | {"transactionId":80}] ]</msg>
+<status status="PASS" starttime="20191213 15:12:06.945" endtime="20191213 15:12:06.946"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>MessageID=@{words}[1]</arg>
+<arg>CommandName=@{words}[2]</arg>
+</arguments>
+<assign>
+<var>&amp;{RequestData}</var>
+</assign>
+<msg timestamp="20191213 15:12:06.949" level="INFO">&amp;{RequestData} = { MessageID="8557f8fb-ec50-4564-842d-c92a9b9f49cd" | CommandName="RemoteStopTransaction" }</msg>
+<status status="PASS" starttime="20191213 15:12:06.947" endtime="20191213 15:12:06.949"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>[3,</arg>
+<arg>&amp;{RequestData}[MessageID]</arg>
+</arguments>
+<assign>
+<var>${RemoteStopResponse}</var>
+</assign>
+<msg timestamp="20191213 15:12:06.951" level="INFO">${RemoteStopResponse} = [3,"8557f8fb-ec50-4564-842d-c92a9b9f49cd"</msg>
+<status status="PASS" starttime="20191213 15:12:06.950" endtime="20191213 15:12:06.952"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${RemoteStopResponse}</arg>
+<arg>,{"status":"Accepted"}]</arg>
+</arguments>
+<assign>
+<var>${RemoteStopResponse}</var>
+</assign>
+<msg timestamp="20191213 15:12:06.954" level="INFO">${RemoteStopResponse} = [3,"8557f8fb-ec50-4564-842d-c92a9b9f49cd",{"status":"Accepted"}]</msg>
+<status status="PASS" starttime="20191213 15:12:06.953" endtime="20191213 15:12:06.954"></status>
+</kw>
+<kw name="Send" library="WebSocketClient">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>${RemoteStopResponse}</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:12:06.955" endtime="20191213 15:12:06.956"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:08.957" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:06.957" endtime="20191213 15:12:08.957"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:04.626" endtime="20191213 15:12:08.958"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:04.624" endtime="20191213 15:12:08.958" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t9" name="EVSE-Search By Name">
+<kw name="EVSE-Search By Name" library="WebSocketconnection">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@placeholder='Search']</arg>
+<arg>MODEL1_INST1</arg>
+</arguments>
+<msg timestamp="20191213 15:12:08.961" level="INFO">Typing text 'MODEL1_INST1' into text field 'xpath=//input[@placeholder='Search']'.</msg>
+<status status="PASS" starttime="20191213 15:12:08.961" endtime="20191213 15:12:09.171"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,'Submit')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:09.172" level="INFO">Clicking button 'xpath=//button[contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:09.171" endtime="20191213 15:12:09.279"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:11.281" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:09.279" endtime="20191213 15:12:11.281"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>MODEL1_INST1</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:12:11.282" endtime="20191213 15:12:11.298"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:08.960" endtime="20191213 15:12:11.299"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,'Reset')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:11.300" level="INFO">Clicking button 'xpath=//button[contains(.,'Reset')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:11.299" endtime="20191213 15:12:11.387"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:08.959" endtime="20191213 15:12:11.388" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t10" name="EVSE-Search By StationID">
+<kw name="EVSE-Search By StationID" library="WebSocketconnection">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@placeholder='Search']</arg>
+<arg>S1</arg>
+</arguments>
+<msg timestamp="20191213 15:12:11.392" level="INFO">Typing text 'S1' into text field 'xpath=//input[@placeholder='Search']'.</msg>
+<status status="PASS" starttime="20191213 15:12:11.391" endtime="20191213 15:12:11.550"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,'Submit')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:11.551" level="INFO">Clicking button 'xpath=//button[contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:11.550" endtime="20191213 15:12:11.626"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:13.642" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:11.627" endtime="20191213 15:12:13.642"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>S1</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:12:13.642" endtime="20191213 15:12:13.693"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:11.390" endtime="20191213 15:12:13.694"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,'Reset')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:13.695" level="INFO">Clicking button 'xpath=//button[contains(.,'Reset')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:13.694" endtime="20191213 15:12:13.759"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:11.389" endtime="20191213 15:12:13.759" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t11" name="EVSE-Search By Location">
+<kw name="EVSE-Search By Location" library="WebSocketconnection">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@placeholder='Search']</arg>
+<arg>Sec 153</arg>
+</arguments>
+<msg timestamp="20191213 15:12:13.764" level="INFO">Typing text 'Sec 153' into text field 'xpath=//input[@placeholder='Search']'.</msg>
+<status status="PASS" starttime="20191213 15:12:13.763" endtime="20191213 15:12:13.920"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,'Submit')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:13.921" level="INFO">Clicking button 'xpath=//button[contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:13.920" endtime="20191213 15:12:14.008"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:16.010" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:14.008" endtime="20191213 15:12:16.010"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Sec 153</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:12:16.011" endtime="20191213 15:12:16.029"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:13.762" endtime="20191213 15:12:16.029"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[contains(.,'Reset')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:16.030" level="INFO">Clicking button 'xpath=//button[contains(.,'Reset')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:16.030" endtime="20191213 15:12:16.110"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:13.761" endtime="20191213 15:12:16.111" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t12" name="Back to Dashboard">
+<kw name="Back to Dashboard" library="WebSocketconnection">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,'Dashboard')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:16.118" level="INFO">Clicking link 'xpath=//a[contains(.,'Dashboard')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:16.117" endtime="20191213 15:12:16.317"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:18.319" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:16.318" endtime="20191213 15:12:18.319"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Total Locations</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:12:18.320" endtime="20191213 15:12:18.336"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:16.115" endtime="20191213 15:12:18.337"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:16.113" endtime="20191213 15:12:18.337" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t13" name="Go to Session Summary">
+<kw name="Go to Session Summary" library="WebSocketconnection">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,'Reports')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:18.340" level="INFO">Clicking link 'xpath=//a[contains(.,'Reports')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:18.339" endtime="20191213 15:12:18.568"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:20.572" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:18.570" endtime="20191213 15:12:20.572"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Session Summary</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:12:20.573" endtime="20191213 15:12:20.594"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:18.339" endtime="20191213 15:12:20.594"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:18.338" endtime="20191213 15:12:20.594" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t14" name="Show OCPP Logs">
+<kw name="Show OCPP Logs" library="WebSocketconnection">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(.,'OCPP Logs')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:20.597" level="INFO">Clicking link 'xpath=//a[contains(.,'OCPP Logs')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:20.597" endtime="20191213 15:12:20.909"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:22.911" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:20.910" endtime="20191213 15:12:22.911"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>OCPP Logs</arg>
+</arguments>
+<status status="PASS" starttime="20191213 15:12:22.912" endtime="20191213 15:12:22.932"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:20.596" endtime="20191213 15:12:22.932"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:20.595" endtime="20191213 15:12:22.933" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t15" name="Search Logs by MessageType:Boot Notification">
+<kw name="Search Logs by MessageType:Boot Notification" library="WebSocketconnection">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg timestamp="20191213 15:12:22.936" level="INFO">Clicking element 'xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']'.</msg>
+<status status="PASS" starttime="20191213 15:12:22.936" endtime="20191213 15:12:23.043"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-option-text'][contains(.,'Boot Notification')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:23.044" level="INFO">Clicking element 'xpath=//span[@class='mat-option-text'][contains(.,'Boot Notification')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:23.044" endtime="20191213 15:12:23.194"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-button-wrapper'][contains(.,'Submit')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:23.195" level="INFO">Clicking element 'xpath=//span[@class='mat-button-wrapper'][contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:23.194" endtime="20191213 15:12:23.285"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:25.288" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:23.286" endtime="20191213 15:12:25.288"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>Stop Transaction</arg>
+<arg>Start Transaction</arg>
+<arg>Status Notification</arg>
+</arguments>
+<msg timestamp="20191213 15:12:25.303" level="INFO">Current page does not contain element 'Stop Transaction'.</msg>
+<status status="PASS" starttime="20191213 15:12:25.289" endtime="20191213 15:12:25.304"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@class='btn_flat mat-button mat-button-base'][contains(.,'Reset')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:25.304" level="INFO">Clicking button 'xpath=//button[@class='btn_flat mat-button mat-button-base'][contains(.,'Reset')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:25.304" endtime="20191213 15:12:25.390"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:22.935" endtime="20191213 15:12:25.391"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:22.934" endtime="20191213 15:12:25.391" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t16" name="Search Logs by MessageType:Start Transaction">
+<kw name="Search Logs by MessageType:Start Transaction" library="WebSocketconnection">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg timestamp="20191213 15:12:25.394" level="INFO">Clicking element 'xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']'.</msg>
+<status status="PASS" starttime="20191213 15:12:25.394" endtime="20191213 15:12:25.474"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-option-text'][contains(.,'Start Transaction')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:25.475" level="INFO">Clicking element 'xpath=//span[@class='mat-option-text'][contains(.,'Start Transaction')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:25.475" endtime="20191213 15:12:25.572"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-button-wrapper'][contains(.,'Submit')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:25.573" level="INFO">Clicking element 'xpath=//span[@class='mat-button-wrapper'][contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:25.573" endtime="20191213 15:12:25.651"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:27.656" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:25.652" endtime="20191213 15:12:27.656"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>Stop Transaction</arg>
+<arg>Boot Notification</arg>
+<arg>Status Notification</arg>
+</arguments>
+<msg timestamp="20191213 15:12:27.669" level="INFO">Current page does not contain element 'Stop Transaction'.</msg>
+<status status="PASS" starttime="20191213 15:12:27.657" endtime="20191213 15:12:27.669"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@class='btn_flat mat-button mat-button-base'][contains(.,'Reset')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:27.670" level="INFO">Clicking button 'xpath=//button[@class='btn_flat mat-button mat-button-base'][contains(.,'Reset')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:27.670" endtime="20191213 15:12:27.744"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:25.393" endtime="20191213 15:12:27.745"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:25.392" endtime="20191213 15:12:27.746" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t17" name="Search Logs by MessageType:Stop Transaction">
+<kw name="Search Logs by MessageType:Stop Transaction" library="WebSocketconnection">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg timestamp="20191213 15:12:27.751" level="INFO">Clicking element 'xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']'.</msg>
+<status status="PASS" starttime="20191213 15:12:27.750" endtime="20191213 15:12:27.839"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-option-text'][contains(.,'Stop Transaction')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:27.841" level="INFO">Clicking element 'xpath=//span[@class='mat-option-text'][contains(.,'Stop Transaction')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:27.840" endtime="20191213 15:12:27.957"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-button-wrapper'][contains(.,'Submit')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:27.959" level="INFO">Clicking element 'xpath=//span[@class='mat-button-wrapper'][contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:27.958" endtime="20191213 15:12:28.013"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:30.016" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:28.015" endtime="20191213 15:12:30.016"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>Start Transaction</arg>
+<arg>Boot Notification</arg>
+<arg>Status Notification</arg>
+</arguments>
+<msg timestamp="20191213 15:12:30.035" level="INFO">Current page does not contain element 'Start Transaction'.</msg>
+<status status="PASS" starttime="20191213 15:12:30.017" endtime="20191213 15:12:30.035"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@class='btn_flat mat-button mat-button-base'][contains(.,'Reset')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:30.036" level="INFO">Clicking button 'xpath=//button[@class='btn_flat mat-button mat-button-base'][contains(.,'Reset')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:30.035" endtime="20191213 15:12:30.106"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:27.749" endtime="20191213 15:12:30.106"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:27.747" endtime="20191213 15:12:30.107" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t18" name="Search Logs by MessageType:Status Notification">
+<kw name="Search Logs by MessageType:Status Notification" library="WebSocketconnection">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg timestamp="20191213 15:12:30.113" level="INFO">Clicking element 'xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']'.</msg>
+<status status="PASS" starttime="20191213 15:12:30.111" endtime="20191213 15:12:30.207"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-option-text'][contains(.,'Status Notification')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:30.208" level="INFO">Clicking element 'xpath=//span[@class='mat-option-text'][contains(.,'Status Notification')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:30.208" endtime="20191213 15:12:30.304"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[@class='mat-button-wrapper'][contains(.,'Submit')]</arg>
+</arguments>
+<msg timestamp="20191213 15:12:30.306" level="INFO">Clicking element 'xpath=//span[@class='mat-button-wrapper'][contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20191213 15:12:30.305" endtime="20191213 15:12:30.379"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<msg timestamp="20191213 15:12:32.381" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191213 15:12:30.380" endtime="20191213 15:12:32.381"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>Start Transaction</arg>
+<arg>Boot Notification</arg>
+<arg>Stop Transaction</arg>
+</arguments>
+<msg timestamp="20191213 15:12:32.392" level="INFO">Current page does not contain element 'Start Transaction'.</msg>
+<status status="PASS" starttime="20191213 15:12:32.382" endtime="20191213 15:12:32.392"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:30.110" endtime="20191213 15:12:32.393"></status>
+</kw>
+<status status="PASS" starttime="20191213 15:12:30.108" endtime="20191213 15:12:32.393" critical="yes"></status>
+</test>
+<doc>A resource file containing the application specific keywords</doc>
+<status status="PASS" starttime="20191213 15:11:41.748" endtime="20191213 15:12:32.397"></status>
+</suite>
+<status status="PASS" starttime="20191213 15:11:41.743" endtime="20191213 15:12:32.419"></status>
+</suite>
+<status status="PASS" starttime="20191213 15:11:41.738" endtime="20191213 15:12:32.437"></status>
+</suite>
+<status status="PASS" starttime="20191213 15:11:41.734" endtime="20191213 15:12:32.455"></status>
+</suite>
+<status status="PASS" starttime="20191213 15:11:41.731" endtime="20191213 15:12:32.470"></status>
+</suite>
+<status status="PASS" starttime="20191213 15:11:41.727" endtime="20191213 15:12:32.485"></status>
+</suite>
+<status status="PASS" starttime="20191213 15:11:41.682" endtime="20191213 15:12:32.502"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="18" fail="0">Critical Tests</stat>
+<stat pass="18" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="18" fail="0" id="s1" name="EMS Test">EMS Test</stat>
+<stat pass="18" fail="0" id="s1-s1" name="Src">EMS Test.Src</stat>
+<stat pass="18" fail="0" id="s1-s1-s1" name="Test">EMS Test.Src.Test</stat>
+<stat pass="18" fail="0" id="s1-s1-s1-s1" name="Robotframework">EMS Test.Src.Test.Robotframework</stat>
+<stat pass="18" fail="0" id="s1-s1-s1-s1-s1" name="Acceptance">EMS Test.Src.Test.Robotframework.Acceptance</stat>
+<stat pass="18" fail="0" id="s1-s1-s1-s1-s1-s1" name="UI">EMS Test.Src.Test.Robotframework.Acceptance.UI</stat>
+<stat pass="18" fail="0" id="s1-s1-s1-s1-s1-s1-s1" name="Phoenix UI Test">EMS Test.Src.Test.Robotframework.Acceptance.UI.Phoenix UI Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20191213 15:11:41.754" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' ${str1}=' in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\resources\WebSocketconnection.robot' on line 15.</msg>
+<msg timestamp="20191213 15:11:41.754" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' ${str2}=' in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\resources\WebSocketconnection.robot' on line 16.</msg>
+</errors>
+</robot>

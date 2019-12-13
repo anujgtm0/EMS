@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Jython 2.7.0 on java11.0.4)" generated="20191213 15:47:06.364">
+<suite source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance" name="Acceptance" id="s1">
+<suite source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\OCPP_Commands_Only" name="OCPP Commands Only" id="s1-s1">
+<suite source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\OCPP_Commands_Only\OCPP_Tests.robot" name="OCPP Tests" id="s1-s1-s1">
+<test name="Login To Application" id="s1-s1-s1-t1">
+<kw library="WebSocketconnection" name="Login To Application">
+<arguments>
+<arg>&amp;{login_details}</arg>
+</arguments>
+<kw name="Open Browser">
+<arguments>
+<arg>&amp;{login_values}[url]</arg>
+<arg>&amp;{login_values}[browser]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:09.415">No keyword with name 'Open Browser' found.</msg>
+<status endtime="20191213 15:47:09.417" starttime="20191213 15:47:09.412" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:09.427" starttime="20191213 15:47:09.351" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:09.432" starttime="20191213 15:47:09.343" status="FAIL">No keyword with name 'Open Browser' found.</status>
+</test>
+<test name="Connect to server" id="s1-s1-s1-t2">
+<kw library="WebSocketconnection" name="Connect to server">
+<kw name="WebSocketClient.Connect">
+<arguments>
+<arg>ws://localhost:8887/1234</arg>
+</arguments>
+<assign>
+<var>${my_websocket}=</var>
+</assign>
+<msg level="FAIL" timestamp="20191213 15:47:09.499">No keyword with name 'WebSocketClient.Connect' found.</msg>
+<status endtime="20191213 15:47:09.504" starttime="20191213 15:47:09.496" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:09.512" starttime="20191213 15:47:09.445" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:09.515" starttime="20191213 15:47:09.436" status="FAIL">No keyword with name 'WebSocketClient.Connect' found.</status>
+</test>
+<test name="Establish Database Connection" id="s1-s1-s1-t3">
+<kw library="WebSocketconnection" name="Establish Database Connection">
+<kw library="DatabaseLibrary" name="Connect To Database">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191213 15:47:10.950">Connecting using : pymysql.connect(db=ems_flyway, user=root, passwd=root, host=localhost, port=3306, charset=None) </msg>
+<status endtime="20191213 15:47:11.131" starttime="20191213 15:47:09.541" status="PASS"></status>
+</kw>
+<status endtime="20191213 15:47:11.134" starttime="20191213 15:47:09.538" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:11.137" starttime="20191213 15:47:09.520" status="PASS"></status>
+</test>
+<test name="Verify Boot Notification is sent Successfully" id="s1-s1-s1-t4">
+<kw library="WebSocketconnection" name="BootNotificationRequest">
+<arguments>
+<arg>&amp;{Bootmessage}</arg>
+</arguments>
+<kw name="WebSocketClient.Send">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>&amp;{Bootmessage}[bootmessage]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:11.220">No keyword with name 'WebSocketClient.Send' found.</msg>
+<status endtime="20191213 15:47:11.221" starttime="20191213 15:47:11.217" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:11.225" starttime="20191213 15:47:11.150" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:11.229" starttime="20191213 15:47:11.142" status="FAIL">No keyword with name 'WebSocketClient.Send' found.</status>
+</test>
+<test name="Go to Charge station list" id="s1-s1-s1-t5">
+<kw library="WebSocketconnection" name="Go to Charge station list">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Charge Management')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:11.276">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:11.278" starttime="20191213 15:47:11.271" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:11.281" starttime="20191213 15:47:11.239" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:11.284" starttime="20191213 15:47:11.234" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Remote Start Request" id="s1-s1-s1-t6">
+<kw library="WebSocketconnection" name="Remote Start Request:Accepted">
+<arguments>
+<arg>&amp;{StartMessage}</arg>
+</arguments>
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Start']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:11.351">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:11.353" starttime="20191213 15:47:11.344" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:11.356" starttime="20191213 15:47:11.306" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:11.359" starttime="20191213 15:47:11.289" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Verify Transaction is Started Successfully" id="s1-s1-s1-t7">
+<kw library="WebSocketconnection" name="StartTransactionRequest">
+<arguments>
+<arg>&amp;{StartMessage}</arg>
+</arguments>
+<kw name="WebSocketClient.Send">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>&amp;{StartMessage}[startmessage]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:11.407">No keyword with name 'WebSocketClient.Send' found.</msg>
+<status endtime="20191213 15:47:11.408" starttime="20191213 15:47:11.404" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:11.411" starttime="20191213 15:47:11.368" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:11.413" starttime="20191213 15:47:11.363" status="FAIL">No keyword with name 'WebSocketClient.Send' found.</status>
+</test>
+<test name="Go to Charge station list" id="s1-s1-s1-t8">
+<kw library="WebSocketconnection" name="Go to Charge station list">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Charge Management')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:11.462">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:11.463" starttime="20191213 15:47:11.460" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:11.465" starttime="20191213 15:47:11.429" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:11.469" starttime="20191213 15:47:11.418" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Remote Stop Request:Accepted" id="s1-s1-s1-t9">
+<kw library="WebSocketconnection" name="Remote Stop Request:Accepted">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Stop']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:12.171">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:12.173" starttime="20191213 15:47:12.169" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:12.176" starttime="20191213 15:47:11.767" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:12.178" starttime="20191213 15:47:11.584" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Get TransactionID From Table" id="s1-s1-s1-t10">
+<kw library="WebSocketconnection" name="Get TransactionID From Table">
+<kw library="DatabaseLibrary" name="Query">
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional</doc>
+<arguments>
+<arg>select max(session_id) from evse_session;</arg>
+</arguments>
+<assign>
+<var>${queryResult1}</var>
+</assign>
+<msg level="INFO" timestamp="20191213 15:47:12.288">Executing : Query  |  select max(session_id) from evse_session; </msg>
+<msg level="INFO" timestamp="20191213 15:47:12.376">${queryResult1} = ((80,),)</msg>
+<status endtime="20191213 15:47:12.378" starttime="20191213 15:47:12.189" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${queryResult1[0][0]}</arg>
+</arguments>
+<assign>
+<var>${TID}</var>
+</assign>
+<msg level="INFO" timestamp="20191213 15:47:12.457">${TID} = 80</msg>
+<status endtime="20191213 15:47:12.458" starttime="20191213 15:47:12.380" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${TID}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191213 15:47:12.466">${TID} = 80</msg>
+<status endtime="20191213 15:47:12.468" starttime="20191213 15:47:12.460" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Catenate">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${TID}</arg>
+<arg>${str2}</arg>
+</arguments>
+<assign>
+<var>${str3}</var>
+</assign>
+<msg level="INFO" timestamp="20191213 15:47:12.477">${str3} = 80,"reason":"EmergencyStop","transactionData":[]}]</msg>
+<status endtime="20191213 15:47:12.478" starttime="20191213 15:47:12.470" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Catenate">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${str1}</arg>
+<arg>${str3}</arg>
+</arguments>
+<assign>
+<var>${stoptmessage}</var>
+</assign>
+<msg level="INFO" timestamp="20191213 15:47:12.486">${stoptmessage} = [2,"988746","StopTransaction",{"idTag":"123456","meterStop":2000,"timestamp":"2015-06-30T09:50:37.000Z","transactionId":80,"reason":"EmergencyStop","transactionData":[]}]</msg>
+<status endtime="20191213 15:47:12.487" starttime="20191213 15:47:12.480" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${stoptmessage}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191213 15:47:12.541">${stoptmessage} = [2,"988746","StopTransaction",{"idTag":"123456","meterStop":2000,"timestamp":"2015-06-30T09:50:37.000Z","transactionId":80,"reason":"EmergencyStop","transactionData":[]}]</msg>
+<status endtime="20191213 15:47:12.543" starttime="20191213 15:47:12.536" status="PASS"></status>
+</kw>
+<status endtime="20191213 15:47:12.544" starttime="20191213 15:47:12.185" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:12.546" starttime="20191213 15:47:12.181" status="PASS"></status>
+</test>
+<test name="Verify Transaction is stopped Successfully" id="s1-s1-s1-t11">
+<kw library="WebSocketconnection" name="StopTransactionRequest">
+<kw name="WebSocketClient.Send">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>${stoptmessage}</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:12.636">No keyword with name 'WebSocketClient.Send' found.</msg>
+<status endtime="20191213 15:47:12.637" starttime="20191213 15:47:12.634" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:12.639" starttime="20191213 15:47:12.559" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:12.641" starttime="20191213 15:47:12.551" status="FAIL">No keyword with name 'WebSocketClient.Send' found.</status>
+</test>
+<doc>A resource file containing the application specific keywords</doc>
+<status endtime="20191213 15:47:12.663" starttime="20191213 15:47:06.936" status="FAIL"></status>
+</suite>
+<status endtime="20191213 15:47:12.822" starttime="20191213 15:47:06.910" status="FAIL"></status>
+</suite>
+<suite source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\regression" name="Regression" id="s1-s2">
+<suite source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\regression\Regression.robot" name="Regression" id="s1-s2-s1">
+<test name="Login To Application" id="s1-s2-s1-t1">
+<kw library="WebSocketconnection" name="Login To Application">
+<arguments>
+<arg>&amp;{login_details}</arg>
+</arguments>
+<kw name="Open Browser">
+<arguments>
+<arg>&amp;{login_values}[url]</arg>
+<arg>&amp;{login_values}[browser]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:13.274">No keyword with name 'Open Browser' found.</msg>
+<status endtime="20191213 15:47:13.275" starttime="20191213 15:47:13.273" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:13.277" starttime="20191213 15:47:13.178" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.279" starttime="20191213 15:47:13.173" status="FAIL">No keyword with name 'Open Browser' found.</status>
+</test>
+<test name="Connect to server" id="s1-s2-s1-t2">
+<kw library="WebSocketconnection" name="Connect to server">
+<kw name="WebSocketClient.Connect">
+<arguments>
+<arg>ws://localhost:8887/1234</arg>
+</arguments>
+<assign>
+<var>${my_websocket}=</var>
+</assign>
+<msg level="FAIL" timestamp="20191213 15:47:13.374">No keyword with name 'WebSocketClient.Connect' found.</msg>
+<status endtime="20191213 15:47:13.376" starttime="20191213 15:47:13.372" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:13.393" starttime="20191213 15:47:13.343" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.395" starttime="20191213 15:47:13.329" status="FAIL">No keyword with name 'WebSocketClient.Connect' found.</status>
+</test>
+<test name="Establish Database Connection" id="s1-s2-s1-t3">
+<kw library="WebSocketconnection" name="Establish Database Connection">
+<kw library="DatabaseLibrary" name="Connect To Database">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191213 15:47:13.414">Connecting using : pymysql.connect(db=ems_flyway, user=root, passwd=root, host=localhost, port=3306, charset=None) </msg>
+<status endtime="20191213 15:47:13.630" starttime="20191213 15:47:13.406" status="PASS"></status>
+</kw>
+<status endtime="20191213 15:47:13.632" starttime="20191213 15:47:13.402" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.634" starttime="20191213 15:47:13.399" status="PASS"></status>
+</test>
+<test name="Verify Boot Notification is sent Successfully" id="s1-s2-s1-t4">
+<kw library="WebSocketconnection" name="BootNotificationRequest">
+<arguments>
+<arg>&amp;{Bootmessage}</arg>
+</arguments>
+<kw name="WebSocketClient.Send">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>&amp;{Bootmessage}[bootmessage]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:13.672">No keyword with name 'WebSocketClient.Send' found.</msg>
+<status endtime="20191213 15:47:13.674" starttime="20191213 15:47:13.671" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:13.676" starttime="20191213 15:47:13.640" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.679" starttime="20191213 15:47:13.637" status="FAIL">No keyword with name 'WebSocketClient.Send' found.</status>
+</test>
+<test name="Go to Charge station list" id="s1-s2-s1-t5">
+<kw library="WebSocketconnection" name="Go to Charge station list">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Charge Management')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:13.715">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:13.719" starttime="20191213 15:47:13.714" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:13.722" starttime="20191213 15:47:13.686" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.723" starttime="20191213 15:47:13.682" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Remote Start Request" id="s1-s2-s1-t6">
+<kw library="WebSocketconnection" name="Remote Start Request:Accepted">
+<arguments>
+<arg>&amp;{StartMessage}</arg>
+</arguments>
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Start']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:13.780">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:13.781" starttime="20191213 15:47:13.779" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:13.784" starttime="20191213 15:47:13.730" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.786" starttime="20191213 15:47:13.727" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Verify Transaction is Started Successfully" id="s1-s2-s1-t7">
+<kw library="WebSocketconnection" name="StartTransactionRequest">
+<arguments>
+<arg>&amp;{StartMessage}</arg>
+</arguments>
+<kw name="WebSocketClient.Send">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>&amp;{StartMessage}[startmessage]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:13.853">No keyword with name 'WebSocketClient.Send' found.</msg>
+<status endtime="20191213 15:47:13.857" starttime="20191213 15:47:13.851" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:13.859" starttime="20191213 15:47:13.811" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.861" starttime="20191213 15:47:13.807" status="FAIL">No keyword with name 'WebSocketClient.Send' found.</status>
+</test>
+<test name="EVSE-Search By Name" id="s1-s2-s1-t8">
+<kw library="WebSocketconnection" name="EVSE-Search By Name">
+<kw name="Input text">
+<arguments>
+<arg>xpath=//input[@placeholder='Search']</arg>
+<arg>MODEL1_INST1</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:13.892">No keyword with name 'Input text' found.</msg>
+<status endtime="20191213 15:47:13.894" starttime="20191213 15:47:13.890" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:13.896" starttime="20191213 15:47:13.869" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.897" starttime="20191213 15:47:13.864" status="FAIL">No keyword with name 'Input text' found.</status>
+</test>
+<test name="EVSE-Search By StationID" id="s1-s2-s1-t9">
+<kw library="WebSocketconnection" name="EVSE-Search By StationID">
+<kw name="Input text">
+<arguments>
+<arg>xpath=//input[@placeholder='Search']</arg>
+<arg>S1</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:13.941">No keyword with name 'Input text' found.</msg>
+<status endtime="20191213 15:47:13.943" starttime="20191213 15:47:13.940" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:13.945" starttime="20191213 15:47:13.905" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.947" starttime="20191213 15:47:13.900" status="FAIL">No keyword with name 'Input text' found.</status>
+</test>
+<test name="EVSE-Search By Location" id="s1-s2-s1-t10">
+<kw library="WebSocketconnection" name="EVSE-Search By Location">
+<kw name="Input text">
+<arguments>
+<arg>xpath=//input[@placeholder='Search']</arg>
+<arg>Sec 153</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:13.981">No keyword with name 'Input text' found.</msg>
+<status endtime="20191213 15:47:13.982" starttime="20191213 15:47:13.980" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:13.986" starttime="20191213 15:47:13.953" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:13.989" starttime="20191213 15:47:13.949" status="FAIL">No keyword with name 'Input text' found.</status>
+</test>
+<test name="Back to Dashboard" id="s1-s2-s1-t11">
+<kw library="WebSocketconnection" name="Back to Dashboard">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Dashboard')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.038">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:14.039" starttime="20191213 15:47:14.037" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.041" starttime="20191213 15:47:14.008" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.043" starttime="20191213 15:47:13.995" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Go to Charge station list" id="s1-s2-s1-t12">
+<kw library="WebSocketconnection" name="Go to Charge station list">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Charge Management')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.092">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:14.093" starttime="20191213 15:47:14.091" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.096" starttime="20191213 15:47:14.067" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.098" starttime="20191213 15:47:14.048" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Remote Stop Request:Accepted" id="s1-s2-s1-t13">
+<kw library="WebSocketconnection" name="Remote Stop Request:Accepted">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Stop']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.125">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:14.126" starttime="20191213 15:47:14.124" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.128" starttime="20191213 15:47:14.106" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.129" starttime="20191213 15:47:14.101" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Get TransactionID From Table" id="s1-s2-s1-t14">
+<kw library="WebSocketconnection" name="Get TransactionID From Table">
+<kw library="DatabaseLibrary" name="Query">
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional</doc>
+<arguments>
+<arg>select max(session_id) from evse_session;</arg>
+</arguments>
+<assign>
+<var>${queryResult1}</var>
+</assign>
+<msg level="INFO" timestamp="20191213 15:47:14.151">Executing : Query  |  select max(session_id) from evse_session; </msg>
+<msg level="INFO" timestamp="20191213 15:47:14.160">${queryResult1} = ((80,),)</msg>
+<status endtime="20191213 15:47:14.161" starttime="20191213 15:47:14.148" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${queryResult1[0][0]}</arg>
+</arguments>
+<assign>
+<var>${TID}</var>
+</assign>
+<msg level="INFO" timestamp="20191213 15:47:14.170">${TID} = 80</msg>
+<status endtime="20191213 15:47:14.171" starttime="20191213 15:47:14.162" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${TID}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191213 15:47:14.191">${TID} = 80</msg>
+<status endtime="20191213 15:47:14.193" starttime="20191213 15:47:14.173" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Catenate">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${TID}</arg>
+<arg>${str2}</arg>
+</arguments>
+<assign>
+<var>${str3}</var>
+</assign>
+<msg level="INFO" timestamp="20191213 15:47:14.204">${str3} = 80,"reason":"EmergencyStop","transactionData":[]}]</msg>
+<status endtime="20191213 15:47:14.205" starttime="20191213 15:47:14.194" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Catenate">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${str1}</arg>
+<arg>${str3}</arg>
+</arguments>
+<assign>
+<var>${stoptmessage}</var>
+</assign>
+<msg level="INFO" timestamp="20191213 15:47:14.214">${stoptmessage} = [2,"988746","StopTransaction",{"idTag":"123456","meterStop":2000,"timestamp":"2015-06-30T09:50:37.000Z","transactionId":80,"reason":"EmergencyStop","transactionData":[]}]</msg>
+<status endtime="20191213 15:47:14.215" starttime="20191213 15:47:14.208" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${stoptmessage}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191213 15:47:14.220">${stoptmessage} = [2,"988746","StopTransaction",{"idTag":"123456","meterStop":2000,"timestamp":"2015-06-30T09:50:37.000Z","transactionId":80,"reason":"EmergencyStop","transactionData":[]}]</msg>
+<status endtime="20191213 15:47:14.222" starttime="20191213 15:47:14.216" status="PASS"></status>
+</kw>
+<status endtime="20191213 15:47:14.224" starttime="20191213 15:47:14.136" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.225" starttime="20191213 15:47:14.133" status="PASS"></status>
+</test>
+<test name="StopTransactionRequest" id="s1-s2-s1-t15">
+<kw library="WebSocketconnection" name="StopTransactionRequest">
+<kw name="WebSocketClient.Send">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>${stoptmessage}</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.252">No keyword with name 'WebSocketClient.Send' found.</msg>
+<status endtime="20191213 15:47:14.253" starttime="20191213 15:47:14.251" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.255" starttime="20191213 15:47:14.230" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.257" starttime="20191213 15:47:14.227" status="FAIL">No keyword with name 'WebSocketClient.Send' found.</status>
+</test>
+<test name="Back to Dashboard" id="s1-s2-s1-t16">
+<kw library="WebSocketconnection" name="Back to Dashboard">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Dashboard')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.282">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:14.283" starttime="20191213 15:47:14.281" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.286" starttime="20191213 15:47:14.264" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.288" starttime="20191213 15:47:14.260" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Go to Session Summary" id="s1-s2-s1-t17">
+<kw library="WebSocketconnection" name="Go to Session Summary">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Reports')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.334">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:14.335" starttime="20191213 15:47:14.333" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.337" starttime="20191213 15:47:14.305" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.339" starttime="20191213 15:47:14.299" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Show OCPP Logs" id="s1-s2-s1-t18">
+<kw library="WebSocketconnection" name="Show OCPP Logs">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'OCPP Logs')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.365">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:14.366" starttime="20191213 15:47:14.364" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.368" starttime="20191213 15:47:14.347" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.369" starttime="20191213 15:47:14.343" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Search Logs by MessageType:Boot Notification" id="s1-s2-s1-t19">
+<kw library="WebSocketconnection" name="Search Logs by MessageType:Boot Notification">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.395">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:14.396" starttime="20191213 15:47:14.394" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.400" starttime="20191213 15:47:14.376" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.402" starttime="20191213 15:47:14.372" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Search Logs by MessageType:Start Transaction" id="s1-s2-s1-t20">
+<kw library="WebSocketconnection" name="Search Logs by MessageType:Start Transaction">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.426">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:14.453" starttime="20191213 15:47:14.425" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.455" starttime="20191213 15:47:14.409" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.457" starttime="20191213 15:47:14.405" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Search Logs by MessageType:Stop Transaction" id="s1-s2-s1-t21">
+<kw library="WebSocketconnection" name="Search Logs by MessageType:Stop Transaction">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.481">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:14.482" starttime="20191213 15:47:14.480" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.484" starttime="20191213 15:47:14.465" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.486" starttime="20191213 15:47:14.461" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Search Logs by MessageType:Status Notification" id="s1-s2-s1-t22">
+<kw library="WebSocketconnection" name="Search Logs by MessageType:Status Notification">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.523">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:14.525" starttime="20191213 15:47:14.522" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.529" starttime="20191213 15:47:14.499" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.530" starttime="20191213 15:47:14.488" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Back to Dashboard" id="s1-s2-s1-t23">
+<kw library="WebSocketconnection" name="Back to Dashboard">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Dashboard')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.559">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:14.560" starttime="20191213 15:47:14.558" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.563" starttime="20191213 15:47:14.538" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.564" starttime="20191213 15:47:14.534" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Go to Session Summary" id="s1-s2-s1-t24">
+<kw library="WebSocketconnection" name="Go to Session Summary">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Reports')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.592">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:14.594" starttime="20191213 15:47:14.591" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.638" starttime="20191213 15:47:14.574" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.654" starttime="20191213 15:47:14.568" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Show OCPP Logs" id="s1-s2-s1-t25">
+<kw library="WebSocketconnection" name="Show OCPP Logs">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'OCPP Logs')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.698">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:14.699" starttime="20191213 15:47:14.697" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:14.701" starttime="20191213 15:47:14.679" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:14.703" starttime="20191213 15:47:14.675" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<doc>A resource file containing the application specific keywords</doc>
+<status endtime="20191213 15:47:14.740" starttime="20191213 15:47:12.920" status="FAIL"></status>
+</suite>
+<status endtime="20191213 15:47:14.767" starttime="20191213 15:47:12.849" status="FAIL"></status>
+</suite>
+<suite source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\UI" name="UI" id="s1-s3">
+<suite source="C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\UI\Phoenix_UI_Test.robot" name="Phoenix UI Test" id="s1-s3-s1">
+<test name="Login To Application" id="s1-s3-s1-t1">
+<kw library="WebSocketconnection" name="Login To Application">
+<arguments>
+<arg>&amp;{login_details}</arg>
+</arguments>
+<kw name="Open Browser">
+<arguments>
+<arg>&amp;{login_values}[url]</arg>
+<arg>&amp;{login_values}[browser]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:14.997">No keyword with name 'Open Browser' found.</msg>
+<status endtime="20191213 15:47:14.998" starttime="20191213 15:47:14.996" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.000" starttime="20191213 15:47:14.979" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.002" starttime="20191213 15:47:14.973" status="FAIL">No keyword with name 'Open Browser' found.</status>
+</test>
+<test name="Go to Charge station list" id="s1-s3-s1-t2">
+<kw library="WebSocketconnection" name="Go to Charge station list">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Charge Management')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.032">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:15.033" starttime="20191213 15:47:15.031" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.035" starttime="20191213 15:47:15.007" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.037" starttime="20191213 15:47:15.004" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Connect to server" id="s1-s3-s1-t3">
+<kw library="WebSocketconnection" name="Connect to server">
+<kw name="WebSocketClient.Connect">
+<arguments>
+<arg>ws://localhost:8887/1234</arg>
+</arguments>
+<assign>
+<var>${my_websocket}=</var>
+</assign>
+<msg level="FAIL" timestamp="20191213 15:47:15.064">No keyword with name 'WebSocketClient.Connect' found.</msg>
+<status endtime="20191213 15:47:15.065" starttime="20191213 15:47:15.062" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.067" starttime="20191213 15:47:15.042" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.068" starttime="20191213 15:47:15.039" status="FAIL">No keyword with name 'WebSocketClient.Connect' found.</status>
+</test>
+<test name="Establish Database Connection" id="s1-s3-s1-t4">
+<kw library="WebSocketconnection" name="Establish Database Connection">
+<kw library="DatabaseLibrary" name="Connect To Database">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191213 15:47:15.084">Connecting using : pymysql.connect(db=ems_flyway, user=root, passwd=root, host=localhost, port=3306, charset=None) </msg>
+<status endtime="20191213 15:47:15.164" starttime="20191213 15:47:15.076" status="PASS"></status>
+</kw>
+<status endtime="20191213 15:47:15.166" starttime="20191213 15:47:15.074" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.167" starttime="20191213 15:47:15.071" status="PASS"></status>
+</test>
+<test name="Verify Boot Notification is sent Successfully" id="s1-s3-s1-t5">
+<kw library="WebSocketconnection" name="BootNotificationRequest">
+<arguments>
+<arg>&amp;{Bootmessage}</arg>
+</arguments>
+<kw name="WebSocketClient.Send">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>&amp;{Bootmessage}[bootmessage]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.192">No keyword with name 'WebSocketClient.Send' found.</msg>
+<status endtime="20191213 15:47:15.193" starttime="20191213 15:47:15.191" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.195" starttime="20191213 15:47:15.173" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.197" starttime="20191213 15:47:15.170" status="FAIL">No keyword with name 'WebSocketClient.Send' found.</status>
+</test>
+<test name="Remote Start Request" id="s1-s3-s1-t6">
+<kw library="WebSocketconnection" name="Remote Start Request:Accepted">
+<arguments>
+<arg>&amp;{StartMessage}</arg>
+</arguments>
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Start']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.223">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:15.224" starttime="20191213 15:47:15.222" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.226" starttime="20191213 15:47:15.203" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.228" starttime="20191213 15:47:15.200" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Verify Transaction is Started Successfully" id="s1-s3-s1-t7">
+<kw library="WebSocketconnection" name="StartTransactionRequest">
+<arguments>
+<arg>&amp;{StartMessage}</arg>
+</arguments>
+<kw name="WebSocketClient.Send">
+<arguments>
+<arg>${my_websocket}</arg>
+<arg>&amp;{StartMessage}[startmessage]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.264">No keyword with name 'WebSocketClient.Send' found.</msg>
+<status endtime="20191213 15:47:15.265" starttime="20191213 15:47:15.262" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.268" starttime="20191213 15:47:15.235" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.270" starttime="20191213 15:47:15.231" status="FAIL">No keyword with name 'WebSocketClient.Send' found.</status>
+</test>
+<test name="Remote Stop Request:Accepted" id="s1-s3-s1-t8">
+<kw library="WebSocketconnection" name="Remote Stop Request:Accepted">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//mat-row[@class='mat-row ng-star-inserted'][contains(.,'MODEL1_INST1')]//a[@mattooltip='Remote Stop']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.293">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:15.294" starttime="20191213 15:47:15.292" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.296" starttime="20191213 15:47:15.277" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.297" starttime="20191213 15:47:15.274" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="EVSE-Search By Name" id="s1-s3-s1-t9">
+<kw library="WebSocketconnection" name="EVSE-Search By Name">
+<kw name="Input text">
+<arguments>
+<arg>xpath=//input[@placeholder='Search']</arg>
+<arg>MODEL1_INST1</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.336">No keyword with name 'Input text' found.</msg>
+<status endtime="20191213 15:47:15.337" starttime="20191213 15:47:15.334" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.339" starttime="20191213 15:47:15.308" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.340" starttime="20191213 15:47:15.301" status="FAIL">No keyword with name 'Input text' found.</status>
+</test>
+<test name="EVSE-Search By StationID" id="s1-s3-s1-t10">
+<kw library="WebSocketconnection" name="EVSE-Search By StationID">
+<kw name="Input text">
+<arguments>
+<arg>xpath=//input[@placeholder='Search']</arg>
+<arg>S1</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.361">No keyword with name 'Input text' found.</msg>
+<status endtime="20191213 15:47:15.362" starttime="20191213 15:47:15.360" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.365" starttime="20191213 15:47:15.346" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.366" starttime="20191213 15:47:15.343" status="FAIL">No keyword with name 'Input text' found.</status>
+</test>
+<test name="EVSE-Search By Location" id="s1-s3-s1-t11">
+<kw library="WebSocketconnection" name="EVSE-Search By Location">
+<kw name="Input text">
+<arguments>
+<arg>xpath=//input[@placeholder='Search']</arg>
+<arg>Sec 153</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.386">No keyword with name 'Input text' found.</msg>
+<status endtime="20191213 15:47:15.387" starttime="20191213 15:47:15.385" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.389" starttime="20191213 15:47:15.372" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.390" starttime="20191213 15:47:15.369" status="FAIL">No keyword with name 'Input text' found.</status>
+</test>
+<test name="Back to Dashboard" id="s1-s3-s1-t12">
+<kw library="WebSocketconnection" name="Back to Dashboard">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Dashboard')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.410">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:15.411" starttime="20191213 15:47:15.409" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.413" starttime="20191213 15:47:15.395" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.415" starttime="20191213 15:47:15.392" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Go to Session Summary" id="s1-s3-s1-t13">
+<kw library="WebSocketconnection" name="Go to Session Summary">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'Reports')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.446">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:15.448" starttime="20191213 15:47:15.445" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.450" starttime="20191213 15:47:15.420" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.451" starttime="20191213 15:47:15.417" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Show OCPP Logs" id="s1-s3-s1-t14">
+<kw library="WebSocketconnection" name="Show OCPP Logs">
+<kw name="Click Link">
+<arguments>
+<arg>xpath=//a[contains(.,'OCPP Logs')]</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.478">No keyword with name 'Click Link' found.</msg>
+<status endtime="20191213 15:47:15.480" starttime="20191213 15:47:15.477" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.503" starttime="20191213 15:47:15.457" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.506" starttime="20191213 15:47:15.453" status="FAIL">No keyword with name 'Click Link' found.</status>
+</test>
+<test name="Search Logs by MessageType:Boot Notification" id="s1-s3-s1-t15">
+<kw library="WebSocketconnection" name="Search Logs by MessageType:Boot Notification">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.534">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:15.535" starttime="20191213 15:47:15.532" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.539" starttime="20191213 15:47:15.513" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.545" starttime="20191213 15:47:15.509" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Search Logs by MessageType:Start Transaction" id="s1-s3-s1-t16">
+<kw library="WebSocketconnection" name="Search Logs by MessageType:Start Transaction">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.576">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:15.577" starttime="20191213 15:47:15.575" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.580" starttime="20191213 15:47:15.553" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.582" starttime="20191213 15:47:15.549" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Search Logs by MessageType:Stop Transaction" id="s1-s3-s1-t17">
+<kw library="WebSocketconnection" name="Search Logs by MessageType:Stop Transaction">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.620">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:15.621" starttime="20191213 15:47:15.619" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.624" starttime="20191213 15:47:15.601" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.626" starttime="20191213 15:47:15.597" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<test name="Search Logs by MessageType:Status Notification" id="s1-s3-s1-t18">
+<kw library="WebSocketconnection" name="Search Logs by MessageType:Status Notification">
+<kw name="Click Element">
+<arguments>
+<arg>xpath=//div[@class='mat-form-field-infix']/mat-select[@placeholder='Message Type']</arg>
+</arguments>
+<msg level="FAIL" timestamp="20191213 15:47:15.648">No keyword with name 'Click Element' found.</msg>
+<status endtime="20191213 15:47:15.650" starttime="20191213 15:47:15.647" status="FAIL"></status>
+</kw>
+<status endtime="20191213 15:47:15.652" starttime="20191213 15:47:15.633" status="FAIL"></status>
+</kw>
+<status critical="yes" endtime="20191213 15:47:15.654" starttime="20191213 15:47:15.629" status="FAIL">No keyword with name 'Click Element' found.</status>
+</test>
+<doc>A resource file containing the application specific keywords</doc>
+<status endtime="20191213 15:47:15.671" starttime="20191213 15:47:14.825" status="FAIL"></status>
+</suite>
+<status endtime="20191213 15:47:15.704" starttime="20191213 15:47:14.785" status="FAIL"></status>
+</suite>
+<status endtime="20191213 15:47:15.745" starttime="20191213 15:47:06.386" status="FAIL"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="49">Critical Tests</stat>
+<stat pass="5" fail="49">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="49" name="Acceptance" id="s1">Acceptance</stat>
+<stat pass="2" fail="9" name="OCPP Commands Only" id="s1-s1">Acceptance.OCPP Commands Only</stat>
+<stat pass="2" fail="9" name="OCPP Tests" id="s1-s1-s1">Acceptance.OCPP Commands Only.OCPP Tests</stat>
+<stat pass="2" fail="23" name="Regression" id="s1-s2">Acceptance.Regression</stat>
+<stat pass="2" fail="23" name="Regression" id="s1-s2-s1">Acceptance.Regression.Regression</stat>
+<stat pass="1" fail="17" name="UI" id="s1-s3">Acceptance.UI</stat>
+<stat pass="1" fail="17" name="Phoenix UI Test" id="s1-s3-s1">Acceptance.UI.Phoenix UI Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg level="ERROR" timestamp="20191213 15:47:08.107">Error in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\Tests_resources\WebSocketconnection.robot': Importing test library 'WebSocketClient' failed: AttributeError: 'module' object has no attribute 'SOL_TCP'
+Traceback (most recent call last):
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\WebSocketClient\__init__.py", line 1, in &lt;module&gt;
+    from .keywords import WebSocketClientKeywords
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\WebSocketClient\keywords.py", line 1, in &lt;module&gt;
+    from websocket import create_connection
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\__init__.py", line 23, in &lt;module&gt;
+    from ._app import WebSocketApp
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_app.py", line 36, in &lt;module&gt;
+    from ._core import WebSocket, getdefaulttimeout
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_core.py", line 34, in &lt;module&gt;
+    from ._handshake import *
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_handshake.py", line 30, in &lt;module&gt;
+    from ._http import *
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_http.py", line 31, in &lt;module&gt;
+    from ._socket import*
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_socket.py", line 28, in &lt;module&gt;
+    DEFAULT_SOCKET_OPTION = [(socket.SOL_TCP, socket.TCP_NODELAY, 1)]
+PYTHONPATH:
+  C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\Lib
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\robotframework-3.0.2.jar\Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  C:\Users\anujg\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.12.0.20190529-1915\jars\plexus-classworlds-2.6.0.jar</msg>
+<msg level="ERROR" timestamp="20191213 15:47:08.232">Error in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\Tests_resources\WebSocketconnection.robot': Importing test library 'Selenium2Library' failed: NoClassDefFoundError: javax/xml/bind/JAXBException
+java.lang.NoClassDefFoundError: 
+	at com.github.markusbernhardt.selenium2library.Selenium2Library.&lt;clinit&gt;(Selenium2Library.java:254)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at Selenium2Library$py.f$0(C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\Selenium2Library\__init__.py:25)
+	at Selenium2Library$py.call_function(C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\Selenium2Library\__init__.py)
+	at robot.utils.importer$py._import$14(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:167)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.utils.importer$py.import_$29(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:257)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.utils.importer$py._import_class_or_module$5(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:77)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.utils.importer$py.import_class_or_module$4(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:74)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.model.visitor$py.visit_suite$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py:88)
+	at robot.model.visitor$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py)
+	at robot.model.testsuite$py.visit$19(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py:161)
+	at robot.model.testsuite$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py)
+	at robot.model.itemlist$py.visit$11(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py:75)
+	at robot.model.itemlist$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py)
+	at robot.model.visitor$py.visit_suite$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py:88)
+	at robot.model.visitor$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py)
+	at robot.model.testsuite$py.visit$19(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py:161)
+	at robot.model.testsuite$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py)
+	at robot.model.itemlist$py.visit$11(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py:75)
+	at robot.model.itemlist$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py)
+	at robot.model.visitor$py.visit_suite$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py:88)
+	at robot.model.visitor$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py)
+	at robot.model.testsuite$py.visit$19(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py:161)
+	at robot.model.testsuite$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py)
+	at robot.run$py.main$3(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py:452)
+	at robot.run$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py)
+	at robot.utils.application$py._execute$10(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py:94)
+	at robot.utils.application$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py)
+	at robot.utils.application$py.execute_cli$5(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py:49)
+	at robot.utils.application$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py)
+	at robot.run$py.run_cli$7(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py:489)
+	at robot.run$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py)
+	at robot.jarrunner$py._run$3(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py:64)
+	at robot.jarrunner$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py)
+	at robot.jarrunner$py.run$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py:57)
+	at robot.jarrunner$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py)
+	at org.robotframework.RobotRunner.run(RobotRunner.java:74)
+	at org.robotframework.RobotFramework.run(RobotFramework.java:61)
+	at org.robotframework.mavenplugin.AcceptanceTestMojo.executeRobot(AcceptanceTestMojo.java:73)
+	at org.robotframework.mavenplugin.AcceptanceTestMojo.subclassExecute(AcceptanceTestMojo.java:68)
+	at org.robotframework.mavenplugin.AbstractMojoWithLoadedClasspath.execute(AbstractMojoWithLoadedClasspath.java:53)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:956)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:192)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:471)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 255 more
+PYTHONPATH:
+  C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\Lib
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\robotframework-3.0.2.jar\Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  C:\Users\anujg\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.12.0.20190529-1915\jars\plexus-classworlds-2.6.0.jar</msg>
+<msg level="ERROR" timestamp="20191213 15:47:09.319">Error in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\regression\Regression1_config.robot': Resource file '..\resources\DBConnection.robot' does not exist.</msg>
+<msg level="WARN" timestamp="20191213 15:47:11.416">Multiple test cases with name 'Go to Charge station list' executed in test suite 'Acceptance.OCPP Commands Only.OCPP Tests'.</msg>
+<msg level="ERROR" timestamp="20191213 15:47:13.071">Error in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\Tests_resources\WebSocketconnection.robot': Importing test library 'WebSocketClient' failed: AttributeError: 'module' object has no attribute 'SOL_TCP'
+Traceback (most recent call last):
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\WebSocketClient\__init__.py", line 1, in &lt;module&gt;
+    from .keywords import WebSocketClientKeywords
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\WebSocketClient\keywords.py", line 1, in &lt;module&gt;
+    from websocket import create_connection
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\__init__.py", line 23, in &lt;module&gt;
+    from ._app import WebSocketApp
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_app.py", line 36, in &lt;module&gt;
+    from ._core import WebSocket, getdefaulttimeout
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_core.py", line 34, in &lt;module&gt;
+    from ._handshake import *
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_handshake.py", line 30, in &lt;module&gt;
+    from ._http import *
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_http.py", line 31, in &lt;module&gt;
+    from ._socket import*
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_socket.py", line 28, in &lt;module&gt;
+    DEFAULT_SOCKET_OPTION = [(socket.SOL_TCP, socket.TCP_NODELAY, 1)]
+PYTHONPATH:
+  C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\Lib
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\robotframework-3.0.2.jar\Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  C:\Users\anujg\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.12.0.20190529-1915\jars\plexus-classworlds-2.6.0.jar</msg>
+<msg level="ERROR" timestamp="20191213 15:47:13.117">Error in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\Tests_resources\WebSocketconnection.robot': Importing test library 'Selenium2Library' failed: NoClassDefFoundError: Could not initialize class Selenium2Library
+java.lang.NoClassDefFoundError: 
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at Selenium2Library$py.f$0(C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\Selenium2Library\__init__.py:25)
+	at Selenium2Library$py.call_function(C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\Selenium2Library\__init__.py)
+	at robot.utils.importer$py._import$14(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:167)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.utils.importer$py.import_$29(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:257)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.utils.importer$py._import_class_or_module$5(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:77)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.utils.importer$py.import_class_or_module$4(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:74)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.model.visitor$py.visit_suite$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py:88)
+	at robot.model.visitor$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py)
+	at robot.model.testsuite$py.visit$19(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py:161)
+	at robot.model.testsuite$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py)
+	at robot.model.itemlist$py.visit$11(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py:75)
+	at robot.model.itemlist$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py)
+	at robot.model.visitor$py.visit_suite$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py:88)
+	at robot.model.visitor$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py)
+	at robot.model.testsuite$py.visit$19(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py:161)
+	at robot.model.testsuite$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py)
+	at robot.model.itemlist$py.visit$11(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py:75)
+	at robot.model.itemlist$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py)
+	at robot.model.visitor$py.visit_suite$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py:88)
+	at robot.model.visitor$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py)
+	at robot.model.testsuite$py.visit$19(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py:161)
+	at robot.model.testsuite$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py)
+	at robot.run$py.main$3(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py:452)
+	at robot.run$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py)
+	at robot.utils.application$py._execute$10(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py:94)
+	at robot.utils.application$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py)
+	at robot.utils.application$py.execute_cli$5(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py:49)
+	at robot.utils.application$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py)
+	at robot.run$py.run_cli$7(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py:489)
+	at robot.run$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py)
+	at robot.jarrunner$py._run$3(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py:64)
+	at robot.jarrunner$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py)
+	at robot.jarrunner$py.run$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py:57)
+	at robot.jarrunner$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py)
+	at org.robotframework.RobotRunner.run(RobotRunner.java:74)
+	at org.robotframework.RobotFramework.run(RobotFramework.java:61)
+	at org.robotframework.mavenplugin.AcceptanceTestMojo.executeRobot(AcceptanceTestMojo.java:73)
+	at org.robotframework.mavenplugin.AcceptanceTestMojo.subclassExecute(AcceptanceTestMojo.java:68)
+	at org.robotframework.mavenplugin.AbstractMojoWithLoadedClasspath.execute(AbstractMojoWithLoadedClasspath.java:53)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:956)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:192)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+PYTHONPATH:
+  C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\Lib
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\robotframework-3.0.2.jar\Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  C:\Users\anujg\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.12.0.20190529-1915\jars\plexus-classworlds-2.6.0.jar</msg>
+<msg level="ERROR" timestamp="20191213 15:47:13.160">Error in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\regression\Regression1_config.robot': Resource file '..\resources\DBConnection.robot' does not exist.</msg>
+<msg level="WARN" timestamp="20191213 15:47:14.046">Multiple test cases with name 'Go to Charge station list' executed in test suite 'Acceptance.Regression.Regression'.</msg>
+<msg level="WARN" timestamp="20191213 15:47:14.259">Multiple test cases with name 'Back to Dashboard' executed in test suite 'Acceptance.Regression.Regression'.</msg>
+<msg level="WARN" timestamp="20191213 15:47:14.533">Multiple test cases with name 'Back to Dashboard' executed in test suite 'Acceptance.Regression.Regression'.</msg>
+<msg level="WARN" timestamp="20191213 15:47:14.567">Multiple test cases with name 'Go to Session Summary' executed in test suite 'Acceptance.Regression.Regression'.</msg>
+<msg level="WARN" timestamp="20191213 15:47:14.657">Multiple test cases with name 'Show OCPP Logs' executed in test suite 'Acceptance.Regression.Regression'.</msg>
+<msg level="ERROR" timestamp="20191213 15:47:14.908">Error in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\Tests_resources\WebSocketconnection.robot': Importing test library 'WebSocketClient' failed: AttributeError: 'module' object has no attribute 'SOL_TCP'
+Traceback (most recent call last):
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\WebSocketClient\__init__.py", line 1, in &lt;module&gt;
+    from .keywords import WebSocketClientKeywords
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\WebSocketClient\keywords.py", line 1, in &lt;module&gt;
+    from websocket import create_connection
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\__init__.py", line 23, in &lt;module&gt;
+    from ._app import WebSocketApp
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_app.py", line 36, in &lt;module&gt;
+    from ._core import WebSocket, getdefaulttimeout
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_core.py", line 34, in &lt;module&gt;
+    from ._handshake import *
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_handshake.py", line 30, in &lt;module&gt;
+    from ._http import *
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_http.py", line 31, in &lt;module&gt;
+    from ._socket import*
+  File "C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\websocket\_socket.py", line 28, in &lt;module&gt;
+    DEFAULT_SOCKET_OPTION = [(socket.SOL_TCP, socket.TCP_NODELAY, 1)]
+PYTHONPATH:
+  C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\Lib
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\robotframework-3.0.2.jar\Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  C:\Users\anujg\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.12.0.20190529-1915\jars\plexus-classworlds-2.6.0.jar</msg>
+<msg level="ERROR" timestamp="20191213 15:47:14.933">Error in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\Tests_resources\WebSocketconnection.robot': Importing test library 'Selenium2Library' failed: NoClassDefFoundError: Could not initialize class Selenium2Library
+java.lang.NoClassDefFoundError: 
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at Selenium2Library$py.f$0(C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\Selenium2Library\__init__.py:25)
+	at Selenium2Library$py.call_function(C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\Selenium2Library\__init__.py)
+	at robot.utils.importer$py._import$14(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:167)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.utils.importer$py.import_$29(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:257)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.utils.importer$py._import_class_or_module$5(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:77)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.utils.importer$py.import_class_or_module$4(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py:74)
+	at robot.utils.importer$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/importer.py)
+	at robot.model.visitor$py.visit_suite$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py:88)
+	at robot.model.visitor$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py)
+	at robot.model.testsuite$py.visit$19(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py:161)
+	at robot.model.testsuite$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py)
+	at robot.model.itemlist$py.visit$11(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py:75)
+	at robot.model.itemlist$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py)
+	at robot.model.visitor$py.visit_suite$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py:88)
+	at robot.model.visitor$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py)
+	at robot.model.testsuite$py.visit$19(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py:161)
+	at robot.model.testsuite$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py)
+	at robot.model.itemlist$py.visit$11(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py:75)
+	at robot.model.itemlist$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/itemlist.py)
+	at robot.model.visitor$py.visit_suite$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py:88)
+	at robot.model.visitor$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/visitor.py)
+	at robot.model.testsuite$py.visit$19(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py:161)
+	at robot.model.testsuite$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/model/testsuite.py)
+	at robot.run$py.main$3(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py:452)
+	at robot.run$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py)
+	at robot.utils.application$py._execute$10(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py:94)
+	at robot.utils.application$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py)
+	at robot.utils.application$py.execute_cli$5(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py:49)
+	at robot.utils.application$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/utils/application.py)
+	at robot.run$py.run_cli$7(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py:489)
+	at robot.run$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/run.py)
+	at robot.jarrunner$py._run$3(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py:64)
+	at robot.jarrunner$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py)
+	at robot.jarrunner$py.run$2(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py:57)
+	at robot.jarrunner$py.call_function(/Users/jmalinen/Documents/workspace/robotframework/build/Lib/robot/jarrunner.py)
+	at org.robotframework.RobotRunner.run(RobotRunner.java:74)
+	at org.robotframework.RobotFramework.run(RobotFramework.java:61)
+	at org.robotframework.mavenplugin.AcceptanceTestMojo.executeRobot(AcceptanceTestMojo.java:73)
+	at org.robotframework.mavenplugin.AcceptanceTestMojo.subclassExecute(AcceptanceTestMojo.java:68)
+	at org.robotframework.mavenplugin.AbstractMojoWithLoadedClasspath.execute(AbstractMojoWithLoadedClasspath.java:53)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:956)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:192)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+PYTHONPATH:
+  C:\Users\anujg\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\Lib
+  C:\Users\anujg\.m2\repository\org\robotframework\robotframework\3.0.2\robotframework-3.0.2.jar\Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  C:\Users\anujg\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.12.0.20190529-1915\jars\plexus-classworlds-2.6.0.jar</msg>
+<msg level="ERROR" timestamp="20191213 15:47:14.964">Error in file 'C:\Users\anujg\git\EMS_Test\src\test\robotframework\acceptance\regression\Regression1_config.robot': Resource file '..\resources\DBConnection.robot' does not exist.</msg>
+</errors>
+</robot>
